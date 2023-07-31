@@ -2,11 +2,11 @@ import { FC } from "react";
 import { ImageBase } from "../hooks/useRentals";
 import { Rental } from "../types/rentals";
 
-type RentalCardType = {
+type RentalCardProp = {
   data: Rental,
   imageBase: ImageBase
 }
-const RentalCard: FC<RentalCardType> = ({ data, imageBase }) => {
+const RentalCard: FC<RentalCardProp> = ({ data, imageBase }) => {
   const imageId = data.relationships.primary_image.data.id;
 
   return <div className="flex items-center w-3/5">
