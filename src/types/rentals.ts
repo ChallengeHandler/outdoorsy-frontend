@@ -85,3 +85,9 @@ export interface Rental {
     // ...
   }
 }
+
+export type RentalsConfig = {
+  filter?: string,
+  pageLimit?: number,
+  pageOffset?: number
+}
