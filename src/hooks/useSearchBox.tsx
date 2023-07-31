@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useRef } from "react";
 import { SearchBox } from "../components/SearchBox";
 
 export const useDebounce = ( value: any, delay: number = 500 ) => {

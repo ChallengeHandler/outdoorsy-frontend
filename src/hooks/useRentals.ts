@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { getRentals } from '../services/rentals';
 import { ImageAttributes, ImageData } from '../types/metas';
 import { Rental, RentalsConfig } from '../types/rentals';
@@ -11,7 +11,6 @@ export type ImageBase = {
 }
 
 const useRentals = () => {
-  console.log('rerender')
   const abortControllerRef = useRef<AbortController | undefined>(undefined);
   const [imageBase, setImageBase] = useState<ImageBase>({});
   const [rentals, setRentals] = useState<Rental[]>([]);

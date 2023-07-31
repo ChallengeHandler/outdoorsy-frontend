@@ -12,7 +12,7 @@ function App() {
     update({
       filter: query
     })
-  }, [query]);
+  }, [update, query]);
 
   return (
     <div className="App flex flex-col items-center">
