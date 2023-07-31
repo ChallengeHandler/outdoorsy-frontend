@@ -4,7 +4,7 @@ import { ImageAttributes, ImageData } from '../types/metas';
 import { Rental, RentalsConfig } from '../types/rentals';
 import { RentalsResponse } from '../types/services';
 
-type ImageBase = {
+export type ImageBase = {
   [key: string]: ImageAttributes & {
     id: string,
   }

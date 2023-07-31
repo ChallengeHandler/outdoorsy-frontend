@@ -83,6 +83,7 @@ export interface RentalAttributes {
   external: boolean,
   favorite: boolean,
   favorite_count: number,
+  name: string,
   // ...
 }
 
