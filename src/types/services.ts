@@ -1,9 +1,9 @@
-import { ImageMeta, RentalsMeta } from "./metas";
+import { ImageData, RentalsMeta } from "./metas";
 import { Rental } from "./rentals";
 
 export interface RentalsResponse {
   data: Rental[],
-  included: ImageMeta[],
+  included: ImageData[],
   meta: RentalsMeta,
   suggestions: any
 }

@@ -2,10 +2,10 @@ import './App.css';
 import { useRentals } from './hooks/useRentals';
 
 function App() {
-  useRentals({});
-  
+  const { imageBase, rentals } = useRentals({});
   return (
     <div className="App">
+      
     </div>
   );
 }
