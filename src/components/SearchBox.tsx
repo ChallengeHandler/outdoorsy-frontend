@@ -10,9 +10,9 @@ const SearchBox: FC<SearchBoxProp> = ({ value, onChange }) => {
     onChange(e.target.value);
   }
 
-  return <div>
+  return <div className="w-3/5">
     <input
-      className="rounded-xl w-100 h-22 border-slate-600 border-2 m-6 p-6 font-sans text-2xl text-slate-600 font-medium whitespace-normal outline-none"
+      className="rounded-xl w-full h-22 border-slate-600 border-2 m-6 p-6 font-sans text-2xl text-slate-600 font-medium whitespace-normal outline-none"
       value={value}
       onChange={handleChange}
     />

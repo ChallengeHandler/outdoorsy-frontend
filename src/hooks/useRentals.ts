@@ -10,7 +10,7 @@ export type ImageBase = {
   }
 }
 
-const useRentals = (config: RentalsConfig) => {
+const useRentals = () => {
   console.log('rerender')
   const abortControllerRef = useRef<AbortController | undefined>(undefined);
   const [imageBase, setImageBase] = useState<ImageBase>({});
@@ -30,7 +30,7 @@ const useRentals = (config: RentalsConfig) => {
   }, []);
 
   const parseRentalsData = useCallback(async (rentalsData: RentalsResponse) => {
-    parseImageData(rentalsData.included);
+    rentalsData.included && parseImageData(rentalsData.included);
     setRentals(rentalsData.data);
   }, [parseImageData]);
 
@@ -52,14 +52,10 @@ const useRentals = (config: RentalsConfig) => {
     abortControllerRef.current = undefined;
   }, [parseRentalsData]);
 
-  useEffect(() => {
-    update(config);
-    // eslint-disable-next-line
-  }, []);
-
   return {
     rentals,
     imageBase,
+    update
   }
 }
 

@@ -3,7 +3,7 @@ import { Rental } from "./rentals";
 
 export interface RentalsResponse {
   data: Rental[],
-  included: ImageData[],
+  included?: ImageData[],
   meta: RentalsMeta,
-  suggestions: any
+  suggestions?: any
 }

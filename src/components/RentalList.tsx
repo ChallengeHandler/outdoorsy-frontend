@@ -9,7 +9,7 @@ type RentalListProp = {
 }
 const RentalList: FC<RentalListProp> = ({ rentals, imageBase }) => {
   return <div className="flex flex-col items-center">
-    {rentals.map(rental => <RentalCard data={rental} imageBase={imageBase} />)}
+    {rentals.map(rental => <RentalCard key={rental.id} data={rental} imageBase={imageBase} />)}
   </div>
 }
 
